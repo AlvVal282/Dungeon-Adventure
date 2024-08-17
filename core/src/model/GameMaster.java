@@ -414,9 +414,21 @@ public final class GameMaster {
         }
         return result;
     }
+    /**
+     * Retrieves the current dungeon instance.
+     *
+     * @return The current Dungeon object.
+     */
     public Dungeon getDungeon() {
         return myDungeon;
     }
+
+    /**
+     * Loads the game data from the specified GameData object.
+     * This method initializes the player's data, dungeon data, and enemy data.
+     *
+     * @param theGameData The GameData object containing the data to be loaded.
+     */
     public void loadGame(final GameData theGameData) {
         // Load player data
         myPlayer = theGameData.getHero();
@@ -429,4 +441,5 @@ public final class GameMaster {
         // Load enemy data
         myEnemies = theGameData.getEnemies();
     }
+
 }
